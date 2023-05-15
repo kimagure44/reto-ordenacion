@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reto 39</title>
+  <style>
+    .info {
+      display: flex;
+      width: calc(100% - 20px);
+      margin: 15px 0;
+      padding: 10px;
+      overflow-x: scroll;
+      border: 1px solid #cccccc;
+    }
+
+    .info div:first-child {
+      font-weight: bold;
+    }
+
+    .ui {
+      margin: 15px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="draw-quick-sort"></canvas>
+  <div class="info">
+    <div>Original:</div>
+    <div id="originalArr"></div>
+  </div>
+  <div class="info">
+    <div>Ordenado:</div>
+    <div id="orderArr"></div>
+  </div>
+  <div class="ui">
+    <button id="startOrder">Ordenar números</button>
+  </div>
+  <div class="ui">
+    <label for="number">Pausa para realizar la ordenación entre cada número (ms)</label>
+    <input type="number" name="number" id="velocity" title="Duración (ms) para ordenar entre cada número"
+      value="10" />ms
+  </div>
+  <div class="ui">
+    <label for="totalNumbers">Cantidad de números a ordenar</label>
+    <input type="number" name="totalNumbers" id="totalNumbers" title="Cantidad de números a ordenar" value="10" />
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
